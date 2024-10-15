@@ -6,6 +6,7 @@
 nav{
     height: 50px;
     display: flex;
+    margin-bottom: 50px;
     justify-content: space-around;
     align-items: center;
     box-shadow: 2px 2px 4px green;
@@ -15,4 +16,31 @@ nav h1{
     color: white;
     text-shadow: 1px 1px 2px black;
     font-size: 25px;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+section{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main img{
+    height:275px;
+    width: 165px;
+    margin-bottom: 50px;
+    box-shadow: 3px 3px 6px black;
+    border-radius: 10px;
+}
+
+main h2{
+    margin-bottom: 50px;
 }
