@@ -1,6 +1,6 @@
 // Function to generate random stars on the page
 function generateStars() {
-    const starCount = 100;  // Number of stars
+    const starCount = 300;  // Number of stars
     const body = document.querySelector('body');
 
     for (let i = 0; i < starCount; i++) {
