@@ -27,6 +27,8 @@ function generateStars() {
 
 // Call the function to generate stars when the page loads
 window.onload = generateStars;
+//============================================================
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const selectElement = document.getElementById("navigation");
@@ -39,3 +41,4 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = selectedPage;
     });
 });
+//===========================================================
