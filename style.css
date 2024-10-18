@@ -1,76 +1,23 @@
-/* *{
+
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Agdasima", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: black;
-}
-nav{
-    width: 95vw;
-    height: 50px;
-    display: flex;
-    margin-bottom: 50px;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 2px 2px 4px green;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,15,1) 35%, rgba(0,212,255,1) 100%)
-}
-nav h1{
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    font-size: 35px;
+    box-sizing: border-box; /* Ensure padding and margins are handled correctly */
 }
 
-section{
-    height: 75vh;
-    width: 50vw;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+/* Ensure main content fits the full height */
+main {
+    flex: 1; /* Let main take up remaining space */
+    overflow-y: auto; /* Allow vertical scrolling if necessary */
 }
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50vw;
-    background-color: antiquewhite;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 6px black;
-    margin-bottom: 20px;
-}
-
-
-main img{
-    height:275px;
-    width: 165px;
-    margin-bottom: 50px;
-    box-shadow: 3px 3px 6px black;
-    border-radius: 10px;
-}
-
-main h2{
-}
-
-main p{
-    font-size: 1.3em;
-    line-height: 1.4;
-} */
 
 * {
     margin: 0;
     padding: 0;
 }
 body {
+    background: url('./images/smoke1.jpg') no-repeat center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,14 +25,15 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: black;
-    position: relative; /* Add relative position to ensure stars appear correctly */
-    overflow: hidden;   /* Ensure stars don't cause scrollbars */
+    position: relative; /* Needed for stars to be positioned correctly */
+    overflow: hidden;   /* Prevent scrollbars from appearing due to stars */
 }
+
 
 /* Stars styling */
 .star {
     position: absolute;
-    background-color: white;
+    background-color: pink;
     border-radius: 50%;
     animation: twinkle 1.5s infinite alternate;
     opacity: 0;
@@ -112,7 +60,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     box-shadow: 2px 2px 4px green;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,15,1) 35%, rgba(0,212,255,1) 100%);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     z-index: 1; /* Ensure nav stays above the stars */
 }
 
@@ -122,6 +70,7 @@ nav h1 {
     font-size: 35px;
 }
 
+/* Add a semi-transparent background for better readability */
 section {
     height: 75vh;
     width: 50vw;
@@ -130,20 +79,33 @@ section {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    z-index: 1; /* Ensure section content stays above stars */
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: rgba(238,174,202,1); /* Ensure text color is readable */
+    border-radius: 15px; /* Add some rounding to the corners */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow for depth */
+    overflow-y: auto; /* Allow scrolling if the text is too long */
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50vw;
-    background-color: antiquewhite;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 6px black;
-    margin-bottom: 20px;
-    z-index: 1; /* Keep main content above the stars */
+/* Optional: Adjust paragraph styles for readability */
+section p {
+    font-size: 1.2em; /* Adjust the size for better readability */
+    line-height: 1.6; /* Adjust line height for better spacing */
+    padding: 10px; /* Add some padding for a better reading experience */
+}
+
+
+
+main p {
+    overflow-y: auto; /* Scrollable text inside paragraphs */
+    word-wrap: break-word; /* Ensure long text wraps within the container */
+    max-height: 50vh; /* Set max height to avoid overflow */
+    padding-right: 10px; /* Add some padding for better readability */
+}
+
+/* Optional: Hide scrollbar for a cleaner look */
+main p::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers (optional) */
 }
 
 main img {
@@ -152,6 +114,7 @@ main img {
     margin-bottom: 50px;
     box-shadow: 3px 3px 6px black;
     border-radius: 10px;
+    z-index: 2;
 }
 
 main h2 {
@@ -164,6 +127,17 @@ main p {
     z-index: 1;
 }
 
+.headliner-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headliner, .headliner2{
+    font-size: 25px;
+    overflow: auto;
+}
 footer{
     color: royalblue;
 }
+
