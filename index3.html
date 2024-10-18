@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <title>Contact Info</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <h1>James Hammond</h1>
+                <select name="navigation" id="navigation" onchange="location = this.value;">
+                    <option value="#">Select</option>
+                    <option value="index.html">About Me</option>
+                    <option value="index2.html">Projects</option>
+                    <option value="index3.html">Contact Info</option>
+                </select>
+        </nav>
+    </header>
+    <main id="contacts">
+        <container class="card-container">
+            <card id="linkedin-card">
+                <img src="./images/linkedin.png" alt="linkedin logo" id="linkedin-logo">
+                <a href="https://www.linkedin.com/in/james-hammond-3a8b4a278/">Linkedin Profile</a>
+            </card>
+            <card>media</card>
+            <card>media</card>
+        </container>
+    </main>
+    <footer>
+        <p>&copy; 2024 James Hammond</p>
+    </footer>
 </body>
 </html>

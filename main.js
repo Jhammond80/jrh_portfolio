@@ -27,3 +27,15 @@ function generateStars() {
 
 // Call the function to generate stars when the page loads
 window.onload = generateStars;
+
+document.addEventListener("DOMContentLoaded", function() {
+    const selectElement = document.getElementById("navigation");
+
+    selectElement.addEventListener("change", function() {
+        // Get the selected value (URL)
+        const selectedPage = selectElement.value;
+
+        // Redirect to the selected page
+        window.location.href = selectedPage;
+    });
+});
