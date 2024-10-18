@@ -1,4 +1,3 @@
-
 html, body {
     height: 100%;
     margin: 0;
@@ -78,74 +77,42 @@ nav h1 {
     font-size: 35px;
 }
 
-/* Add a semi-transparent background for better readability */
-section {
-    height: 75vh;
-    width: 50vw;
-    padding: 20px;
+
+
+
+/*===================*/
+#contacts{
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-container{
+    height: 80vh;
+    width: 80vw;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    color: rgba(238,174,202,1); /* Ensure text color is readable */
-    border-radius: 15px; /* Add some rounding to the corners */
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow for depth */
-    overflow-y: auto; /* Allow scrolling if the text is too long */
 }
 
-/* Optional: Adjust paragraph styles for readability */
-section p {
-    font-size: 1.2em; /* Adjust the size for better readability */
-    line-height: 1.6; /* Adjust line height for better spacing */
-    padding: 10px; /* Add some padding for a better reading experience */
-}
-
-
-
-main p {
-    overflow-y: auto; /* Scrollable text inside paragraphs */
-    word-wrap: break-word; /* Ensure long text wraps within the container */
-    max-height: 50vh; /* Set max height to avoid overflow */
-    padding-right: 10px; /* Add some padding for better readability */
-}
-
-/* Optional: Hide scrollbar for a cleaner look */
-main p::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for webkit browsers (optional) */
-}
-
-main img {
-    height: 405px;
-    width: 225px;
-    margin-bottom: 50px;
-    box-shadow: 3px 3px 6px black;
+card{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    height: 10vh;
+    width: 15vh;
     border-radius: 10px;
-    z-index: 2;
-}
-
-main h2 {
     z-index: 1;
+    
 }
 
-main p {
-    font-size: 1.5em;
-    line-height: 1.4;
-    z-index: 1;
-}
-
-.headliner-box{
+#linkedin-card{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-.headliner, .headliner2{
-    font-weight: 300 !important;
-    font-size: 25px;
-    color: rgba(148,187,233,1);
-}
-footer{
-    color: royalblue;
+#linkedin-logo{
+    height: 75px;
+    width: 75px;
 }
