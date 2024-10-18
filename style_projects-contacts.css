@@ -102,17 +102,18 @@ card{
     width: 15vh;
     border-radius: 10px;
     z-index: 1;
-    
+    opacity: .7;
 }
 
-#linkedin-card{
+#linkedin-card, #gmail-card, #icloud-card{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 
-#linkedin-logo{
+#linkedin-logo, #gmail-logo, #icloud-logo{
     height: 75px;
     width: 75px;
+    border-radius: 10px;
 }
