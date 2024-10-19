@@ -2,31 +2,30 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensure padding and margins are handled correctly */
+    box-sizing: border-box;
 }
 
-/* Ensure main content fits the full height */
 main {
-    flex: 1; /* Let main take up remaining space */
-    overflow-y: auto; /* Allow vertical scrolling if necessary */
+    flex: 1;
+    overflow-y: auto;
 }
 
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     background: url('./images/smoke1.jpg') no-repeat center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Agdasima", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     background-color: black;
-    position: relative; /* Needed for stars to be positioned correctly */
-    overflow: hidden;   /* Prevent scrollbars from appearing due to stars */
+    position: relative;
+    overflow: hidden;
 }
+
 select {
     padding: 10px;
     font-family: 'Agdasima', sans-serif;
@@ -36,8 +35,6 @@ select {
     color: #333;
 }
 
-
-/* Stars styling */
 .star {
     position: absolute;
     background-color: pink;
@@ -46,17 +43,10 @@ select {
     opacity: 0;
 }
 
-/* Twinkling effect for stars */
 @keyframes twinkle {
-    0% {
-        opacity: 0;
-    }
-    50%{
-        opacity:1;
-    }
-    100% {
-        opacity: 0;
-    }
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 nav {
@@ -68,7 +58,7 @@ nav {
     align-items: center;
     box-shadow: 2px 2px 4px green;
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    z-index: 1; /* Ensure nav stays above the stars */
+    z-index: 1;
 }
 
 nav h1 {
@@ -77,43 +67,93 @@ nav h1 {
     font-size: 35px;
 }
 
-
-
-
-/*===================*/
-#contacts{
-    height: 90vh;
+#contacts {
+    height: 45vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card-container{
-    height: 80vh;
+
+.card-container, #projects {
+    height: 40vh;
     width: 80vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-card{
+.card {
+    padding: 2px;
+    position: relative;
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    height: 10vh;
-    width: 15vh;
+    height: 30vh;
+    width: 20vw;
     border-radius: 10px;
     z-index: 1;
-    opacity: .7;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
-#linkedin-card, #gmail-card, #icloud-card{
+.project-img {
+    width: 100%;
+    height: 250px; /* Increased height for better visibility */
+    object-fit: cover; /* Maintain aspect ratio while filling the height */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    height: 60px; /* Fixed height for description */
+    width: 90%;
+    overflow-y: auto; /* Scroll when text exceeds height */
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+}
+
+/* Rest of your CSS */
+
+
+#linkedin-card, #gmail-card, #icloud-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-#linkedin-logo, #gmail-logo, #icloud-logo{
-    height: 75px;
-    width: 75px;
+#linkedin-logo, #gmail-logo, #icloud-logo {
+    height: auto;
+    width: 100%;
+    max-width: 75px;
+    max-height: 75px;
+    object-fit: cover;
     border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+    .card {
+        width: 40vw;
+        height: 30vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 80vw;
+        height: 25vh;
+    }
+}
+
+
+
+

@@ -14,35 +14,58 @@
     <header>
         <nav>
             <h1>James Hammond</h1>
-                <select name="navigation" id="navigation" onchange="location = this.value;">
-                    <option value="#">Select</option>
-                    <option value="index.html">About Me</option>
-                    <option value="index3.html">Projects & Contact</option>
-                </select>
+            <select name="navigation" id="navigation" onchange="location = this.value;">
+                <option value="#">Select</option>
+                <option value="index.html">About Me</option>
+                <option value="index3.html">Projects & Contact</option>
+            </select>
         </nav>
     </header>
     <main>
-        <section>
-
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="card project-card">
+                <img src="./images/newUser.png" alt="" class="project-img">
+                <div class="description">
+                    <p>Explain: Detailed description about the newUser project goes here. This can be a longer explanation, and it should scroll if too long.</p>
+                </div>
+            </div>
+            <div class="card project-card">
+                <img src="./images/vGameApi.png" alt="" class="project-img">
+                <div class="description">
+                    <p>Explain: Detailed description about the vGameApi project goes here. This can be a longer explanation, and it should scroll if too long.</p>
+                </div>
+            </div>
+            <div class="card project-card">
+                <img src="./images/wedding.png" alt="" class="project-img">
+                <div class="description">
+                    <p>Explain: Detailed description about the wedding project goes here. This can be a longer explanation, and it should scroll if too long.</p>
+                </div>
+            </div>
         </section>
+        
+        <!-- Contacts Section -->
         <section id="contacts">
-            <container class="card-container">
-                <card id="linkedin-card">
+            <div class="card-container">
+                <div class="card" id="linkedin-card">
                     <a href="https://www.linkedin.com/in/james-hammond-3a8b4a278/">
                         <img src="./images/linkedin.png" alt="linkedin logo" id="linkedin-logo">
                     </a>
-                </card>
-                <card id="gmail-card">
+                    <p>Connect</p>
+                </div>
+                <div class="card" id="gmail-card">
                     <a href="mailto:jhammond80@gmail.com">
-                        <img src="./images/icons8-gmail-48.png" alt="gmail logo" id="gmail-logo">
+                        <img src="./images/gmail.png" alt="gmail logo" id="gmail-logo">
                     </a>
-                </card>
-                <card id="icloud-card">
+                    <p>Email</p>
+                </div>
+                <div class="card" id="icloud-card">
                     <a href="mailto: jhammond80@icloud.com">
-                        <img src="./images/icons8-mail-48.png" alt="icloud email logo" id="icloud-logo">
+                        <img src="./images/icloud.png" alt="icloud email logo" id="icloud-logo">
                     </a>
-                </card>
-            </container>
+                    <p>Email</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -50,3 +73,5 @@
     </footer>
 </body>
 </html>
+
+
