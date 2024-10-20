@@ -119,6 +119,9 @@ nav h1 {
     border-radius: 5px;
 }
 
+.description p{
+    font-size: 18px;
+}
 
 
 #linkedin-card, #gmail-card, #icloud-card {
