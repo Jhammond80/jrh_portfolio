@@ -67,6 +67,46 @@ nav h1 {
     font-size: 35px;
 }
 
+/* Resize the contact logos */
+#linkedin-logo, #gmail-logo, #icloud-logo {
+    width: 100%;
+    max-width: 75px; /* Set to original size */
+    max-height: 75px; /* Set to original size */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Adjust the size of contact cards */
+#contacts .card {
+    width: 10vw;  /* Make card smaller in the contacts section */
+    height: 15vh; /* Halve the height of the card */
+    padding: 10px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Additional adjustments for smaller screens */
+@media (max-width: 768px) {
+    #contacts .card {
+        width: 60vw; /* Slightly larger on medium screens */
+        height: 20vh;
+    }
+}
+
+@media (max-width: 480px) {
+    #contacts .card {
+        width: 80vw; /* Larger on very small screens */
+        height: 25vh;
+    }
+}
+
+
 #contacts {
     height: 45vh;
     width: 100vw;
@@ -88,7 +128,7 @@ nav h1 {
     padding: 2px;
     position: relative;
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    height: 30vh;
+    height: 40vh; /* Increased height for better image and text balance */
     width: 20vw;
     border-radius: 10px;
     z-index: 1;
@@ -104,14 +144,14 @@ nav h1 {
 
 .project-img {
     width: 100%;
-    height: 250px; /* Increased height for better visibility */
-    object-fit: cover; /* Maintain aspect ratio while filling the height */
+    height: 60%; /* Image now takes up 60% of card's height */
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .description {
-    height: 80px; /* Fixed height for description */
+    height: 30%; /* Text description takes up 30% of card's height */
     width: 90%;
     overflow-y: auto; /* Scroll when text exceeds height */
     padding: 5px;
@@ -119,42 +159,36 @@ nav h1 {
     border-radius: 5px;
 }
 
-.description p{
-    font-size: 18px;
-}
-
-
-#linkedin-card, #gmail-card, #icloud-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-#linkedin-logo, #gmail-logo, #icloud-logo {
-    height: auto;
-    width: 100%;
-    max-width: 75px;
-    max-height: 75px;
-    object-fit: cover;
-    border-radius: 10px;
+.description p {
+    font-size: 16px; /* Adjust font size to ensure text fits */
 }
 
 @media (max-width: 768px) {
     .card {
         width: 40vw;
-        height: 30vh;
+        height: 35vh; /* Adjust card height for medium-sized screens */
+    }
+    .project-img {
+        height: 55%; /* Keep image height proportional */
+    }
+    .description {
+        height: 35%; /* Adjust text area height */
     }
 }
 
 @media (max-width: 480px) {
     .card {
         width: 80vw;
-        height: 25vh;
+        height: 30vh; /* Further reduce card height for small screens */
+    }
+    .project-img {
+        height: 50%; /* Adjust image height for smaller screens */
+    }
+    .description {
+        height: 40%; /* Allow more space for text on smaller screens */
     }
 }
+
 
 
 
